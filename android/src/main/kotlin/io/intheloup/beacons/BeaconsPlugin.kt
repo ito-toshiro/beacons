@@ -41,8 +41,9 @@ class BeaconsPlugin(val registrar: Registrar) {
 
                 override fun onActivityDestroyed(activity: Activity) {
                     Log.d("beacons", "unbind $beaconClient to $activity")
-                    beaconClient.unbind()
-                    permissionClient.unbind()
+                    //FIXME this is workaround.
+                    //beaconClient.unbind()
+                    //permissionClient.unbind()
                 }
 
                 override fun onActivityResumed(activity: Activity?) {
